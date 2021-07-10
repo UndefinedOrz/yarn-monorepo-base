@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist",
+
+    /* Project */
+    "target": "ES2018", // TypeScript is not used for building, allow all modern features
+    "module": "ESNext", // TypeScript is not used for building, allow all modern features
+    "lib": ["DOM", "ESNext"],
+    /* Build */
+    // `tsc` only used to build type declaration files (`.d.ts`)
+    // "declaration": true,
+    // Disable build to sourcemap
+    // "declarationMap": false,
+    // "sourceMap": false,
+    // "inlineSourceMap": false,
+
+    /* Imports */
+    "moduleResolution": "Node",
+    // Yup, we are using Node
+    "forceConsistentCasingInFileNames": true,
+    // Error out if import and file system have a casing mismatch. Recommended by TS.
+    // Significant perf increase by skipping checking .d.ts files, particularly those in node_modules. Recommended by TS.
+    "skipLibCheck": true,
+    // Allow importing .json files
+    "resolveJsonModule": true,
+
+    /* Additional */
+    "strict": true,
+    "pretty": true,
+    "noImplicitAny": false,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    // "isolatedModules": true,
+    "esModuleInterop": true,
+    // "noEmit": true,
+    // "noFallthroughCasesInSwitch": true,
+    "jsx": "react",
+    "types": ["vite/client", "node"],
+    "paths": {
+      "@/*": ["packages/web/src"],
+      "@rep/ui": ["packages/ui/src"],
+      "@rep/utils": ["packages/utils/src"]
+    }
+  },
+  "exclude": ["node_modules"],
+  "include": ["packages"]
+}

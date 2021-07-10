@@ -1,0 +1,34 @@
+{
+  "name": "@rep/utils",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "jest --passWithNoTests",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "lodash.filter": "^4.6.0",
+    "lodash.get": "^4.4.2",
+    "lodash.without": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/lodash.filter": "^4.6.6",
+    "@types/lodash.get": "^4.4.6",
+    "@types/lodash.without": "^4.4.6"
+  },
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "typing": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  }
+}
