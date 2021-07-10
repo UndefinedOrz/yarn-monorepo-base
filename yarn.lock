@@ -730,10 +730,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@rep/web@workspace:packages/web":
+"@rep/web@workspace:app/web":
   version: 0.0.0-use.local
-  resolution: "@rep/web@workspace:packages/web"
+  resolution: "@rep/web@workspace:app/web"
   dependencies:
+    "@emotion/react": ^11.4.0
+    "@emotion/styled": ^11.3.0
     "@material-ui/core": ^5.0.0-beta.0
     "@material-ui/lab": ^4.0.0-alpha.58
     "@rep/ui": "workspace:packages/ui"

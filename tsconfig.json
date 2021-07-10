@@ -38,11 +38,11 @@
     "jsx": "react",
     "types": ["vite/client", "node"],
     "paths": {
-      "@/*": ["packages/web/src"],
+      "@/*": ["app/web/src"],
       "@rep/ui": ["packages/ui/src"],
       "@rep/utils": ["packages/utils/src"]
     }
   },
   "exclude": ["node_modules"],
-  "include": ["packages"]
+  "include": ["packages", "app/web"]
 }

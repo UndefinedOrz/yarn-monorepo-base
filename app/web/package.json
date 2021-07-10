@@ -7,6 +7,8 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
     "@rep/ui": "workspace:packages/ui",
     "@rep/utils": "workspace:packages/utils",
     "react": "^17.0.2",

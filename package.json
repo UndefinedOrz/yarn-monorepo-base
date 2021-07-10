@@ -6,7 +6,8 @@
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "app/*"
   ],
   "engines": {
     "node": ">=14.16.0"

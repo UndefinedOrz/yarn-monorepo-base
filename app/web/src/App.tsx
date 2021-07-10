@@ -2,16 +2,20 @@ import React, { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import { RepButton } from '@rep/ui'
+import styled from '@emotion/styled'
 
+const StyledButtonX = styled(RepButton)`
+  color: blue;
+`
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
       <header className="App-header">
-        <RepButton variant="contained" size="large">
+        <StyledButtonX variant="contained" size="large">
           Hello{' '}
-        </RepButton>
+        </StyledButtonX>
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
