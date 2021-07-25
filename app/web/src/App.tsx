@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import { RepButton } from '@rep/ui'
+import { RepButton, RepBox } from '@rep/ui'
 import styled from '@emotion/styled'
 
 const StyledButtonX = styled(RepButton)`
@@ -11,7 +11,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
+    <RepBox className="App" p={4}>
       <header className="App-header">
         <StyledButtonX variant="contained" size="large">
           Hello{' '}
@@ -24,7 +24,7 @@ function App() {
           </button>
         </p>
       </header>
-    </div>
+    </RepBox>
   )
 }
 

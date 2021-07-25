@@ -9,8 +9,8 @@
   "typings": "dist/index.d.ts",
   "scripts": {
     "build": "tsup --dts",
-    "build:js": "tsup",
-    "dev": "tsup --watch --dts",
+    "dev": "tsup --dts --watch",
+    "dev:js": "tsup --watch",
     "clean": "rimraf dist"
   },
   "files": [
@@ -24,13 +24,14 @@
     }
   },
   "dependencies": {
-    "@emotion/react": "^11.4.0",
-    "@emotion/styled": "^11.3.0",
-    "@material-ui/core": "^5.0.0-beta.0",
-    "@material-ui/lab": "^4.0.0-alpha.58"
+    "@material-ui/core": "^5.0.0-beta.1",
+    "@material-ui/lab": "^4.0.0-alpha.60"
   },
   "peerDependencies": {
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0"
   }
 }

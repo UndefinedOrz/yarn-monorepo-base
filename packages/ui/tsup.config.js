@@ -1,22 +1,21 @@
-const pkg = require('./package.json');
+const pkg = require('./package.json')
 
 const external = [
   ...new Set([...Object.keys(pkg.peerDependencies || {}), ...Object.keys(pkg.dependencies || {})]),
-];
+]
+
+const isProd = process.env.NODE_ENV === 'production'
 
 /**
  * @type {import('tsup').Options}
  */
 module.exports = {
-  define: {
-    __DEV__: process.env.NODE_ENV !== 'production',
-  },
-  // sourcemap: process.env.NODE_ENV !== 'production',
-  minify: false,
+  minify: true,
   entryPoints: ['src/index.ts'],
   format: ['cjs', 'esm'],
-  splitting: true,
-  dts: true,
+  pure: isProd ? ['console.log', 'console.warn', 'debugger'] : undefined,
+  sourcemap: !isProd,
+  splitting: false,
   external,
   ignoreWatch: [
     '**/{.git,node_modules}/**',
@@ -24,4 +23,4 @@ module.exports = {
     'src/**/*.spec.(ts|tsx)',
     'src/**/*.stories.tsx',
   ],
-};
+}
